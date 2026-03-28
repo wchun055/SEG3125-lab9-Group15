@@ -24,13 +24,13 @@ export default function Home() {
         
         <div className="gap-4 text-base font-medium">
           <div className="items-center gap-4">
-            {/* image here */}
+            <img src="/assets/apple-road.jpg" alt="Apple Road"></img>
             <p className="text-sm text-zinc-500 dark:text-zinc-400">
               123 Apple Road
             </p>
           </div>
           <div className="items-center gap-4">
-            {/* image here */}
+            <img src="/assets/pear-drive.jpg" alt="Pear Avenue"></img>
             <p className="text-sm text-zinc-500 dark:text-zinc-400">
               456 Pear Avenue
             </p>

@@ -13,6 +13,7 @@ export default function Home() {
         <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
           <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
             {/* image here */}
+            <img src="assets/wanda.jpg" alt="Wanda"></img>
             <h2 className="max-w-xs text-2xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
               Wanda the wand-er
             </h2>
@@ -25,6 +26,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
             {/* image here */}
+            <img src="/assets/blanda.jpg" alt="Blanda"></img>
             <h2 className="max-w-xs text-2xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
               Blanda the Brow-Hander
             </h2>
@@ -37,6 +39,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
             {/* image here */}
+            <img src="assets/sandra.jpg" alt="Sandra"></img>
             <h2 className="max-w-xs text-2xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
               Sandra the Skin-Sander
             </h2>
