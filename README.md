@@ -35,11 +35,11 @@
 
 1. You will require your own .env.local file with:
 
-   ```NEXT_PUBLIC_SUPABASE_URL=URL HERE```
+   ```NEXT_PUBLIC_SUPABASE_URL= URL HERE```
 
-   ```NEXT_PUBLIC_SUPABASE_PUBLISHABLE_DEFAULT_KEY=YOUR PERSONAL KEY HERE```
+   ```NEXT_PUBLIC_SUPABASE_PUBLISHABLE_DEFAULT_KEY= YOUR PERSONAL KEY HERE```
 
-   Please reach out for more information for setup.
+   Please reach out for more information for setup!
 
 ### Starting server:
 1. In your clone repository (with npm installed), type:
