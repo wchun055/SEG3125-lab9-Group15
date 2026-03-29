@@ -50,9 +50,6 @@ export default function Home() {
         </div>
         
         <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <div className="flex items-center gap-4">
-            <img src="/assets/team.jpg" alt="Technicians"></img>
-          </div>
           <div className=" items-center gap-4">
             <h2 className="max-w-xs text-2xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
               Meet our technicians
@@ -65,6 +62,9 @@ export default function Home() {
                 Meet the team
               </button>
             </Link>
+          </div>
+          <div className="flex items-center gap-4">
+            <img src="/assets/team.jpg" alt="Technicians"></img>
           </div>
         </div>
       </main>
