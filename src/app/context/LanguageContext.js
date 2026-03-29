@@ -5,15 +5,13 @@ import { createContext, useContext, useState, useEffect } from 'react';
 const LanguageContext = createContext();
 
 export function LanguageProvider({ children }) {
-  const [english, setEnglish] = useState(true);
-
-  useEffect(() => {
-    // Load from localStorage on mount
-    const saved = localStorage.getItem('language');
-    if (saved !== null) {
-      setEnglish(saved === 'true');
+  const [english, setEnglish] = useState(() => {
+    if (typeof window === 'undefined') {
+      return true;
     }
-  }, []);
+    const saved = window.localStorage.getItem('language');
+    return saved !== null ? saved === 'true' : true;
+  });
 
   const changeLanguage = () => {
     const newEnglish = !english;

@@ -1,79 +1,102 @@
 'use client';
 
+import Header from '../components/Header';
+import SideNav from '../components/SideNav';
 import { useLanguage } from '../context/LanguageContext';
 
 export default function Home() {
-  const { english, changeLanguage } = useLanguage();
+  const { english } = useLanguage();
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
+    <div className="min-h-screen bg-white text-slate-900 font-sans">
+      <Header />
+      <SideNav />
+      <main className="w-full lg:ml-48">
+        <div className="w-full mx-auto flex flex-col items-center py-32 px-6 bg-white transition-all duration-300 max-w-6xl">
+        <div className="flex flex-col items-center gap-6 text-center mb-16">
+          <h1 className="text-5xl font-semibold leading-14 tracking-tight text-slate-900">
             {english ? "Our Services" : "Nos Services"}
           </h1>
-          <button onClick={changeLanguage} className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]">
-            {english ? "changer en français" : "Change to English"}
-          </button>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
+          <p className="max-w-2xl text-xl leading-8 text-slate-700">
             {english ? "Beauty, refined." : "Beauté, raffinée."}
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <p className="text-sm text-zinc-500 dark:text-zinc-400">
-            {english ? "LASHES" : "CILS"}
-          </p>
-          <div className="flex items-center gap-4">
-            <div className="w-16 h-16 bg-zinc-200 rounded-full">
-              <img src="/assets/lash-lift.jpg" alt="Lash Lift"></img>
-              <h2>{english ? "Lash Lift" : "Levée de Cils"}</h2>
-              <p>{english ? "60 min" : "60 min"}</p>
+
+        <div className="w-full space-y-16">
+          {/* LASHES */}
+          <div className="flex flex-col items-center gap-8">
+            <p className="text-xs uppercase tracking-wider text-slate-400">{english ? "Lashes" : "Cils"}</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-3xl">
+              <div className="flex flex-col items-center text-center gap-4">
+                <div className="w-full h-56 rounded-xl overflow-hidden bg-gray-200 shadow-sm">
+                  <img src="/assets/lash-lift.jpg" alt="Lash Lift" className="w-full h-full object-cover"/>
+                </div>
+                <div>
+                  <h3 className="text-base font-semibold text-slate-900">{english ? "Lash Lift" : "Levée de Cils"}</h3>
+                  <p className="text-xs text-slate-500 mt-1">{english ? "60 min" : "60 min"}</p>
+                </div>
+              </div>
+              <div className="flex flex-col items-center text-center gap-4">
+                <div className="w-full h-56 rounded-xl overflow-hidden bg-gray-200 shadow-sm">
+                  <img src="/assets/lash-tint.jpg" alt="Lash Tint" className="w-full h-full object-cover"/>
+                </div>
+                <div>
+                  <h3 className="text-base font-semibold text-slate-900">{english ? "Lash Tint" : "Teinture de Cils"}</h3>
+                  <p className="text-xs text-slate-500 mt-1">{english ? "30 min" : "30 min"}</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="flex items-center gap-4">
-            <div className="w-16 h-16 bg-zinc-200 rounded-full">
-              <img src="/assets/lash-tint.jpg" alt="Lash Tint"></img>
-              <h2>{english ? "Lash Tint" : "Teinture de Cils"}</h2>
-              <p>{english ? "30 min" : "30 min"}</p>
+
+          {/* BROWS */}
+          <div className="flex flex-col items-center gap-8">
+            <p className="text-xs uppercase tracking-wider text-slate-400">{english ? "Brows" : "Sourcils"}</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-3xl">
+              <div className="flex flex-col items-center text-center gap-4">
+                <div className="w-full h-56 rounded-xl overflow-hidden bg-gray-200 shadow-sm">
+                  <img src="/assets/eyebrow-threading.jpg" alt="Eyebrow Threading" className="w-full h-full object-cover"/>
+                </div>
+                <div>
+                  <h3 className="text-base font-semibold text-slate-900">{english ? "Eyebrow Threading" : "Duvet de Sourcils"}</h3>
+                  <p className="text-xs text-slate-500 mt-1">{english ? "20 min" : "20 min"}</p>
+                </div>
+              </div>
+              <div className="flex flex-col items-center text-center gap-4">
+                <div className="w-full h-56 rounded-xl overflow-hidden bg-gray-200 shadow-sm">
+                  <img src="/assets/eyebrow-waxing.jpg" alt="Eyebrow Waxing" className="w-full h-full object-cover"/>
+                </div>
+                <div>
+                  <h3 className="text-base font-semibold text-slate-900">{english ? "Eyebrow Waxing" : "Cire de Sourcils"}</h3>
+                  <p className="text-xs text-slate-500 mt-1">{english ? "20 min" : "20 min"}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* WAXING */}
+          <div className="flex flex-col items-center gap-8">
+            <p className="text-xs uppercase tracking-wider text-slate-400">{english ? "Waxing" : "Épilation"}</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-3xl">
+              <div className="flex flex-col items-center text-center gap-4">
+                <div className="w-full h-56 rounded-xl overflow-hidden bg-gray-200 shadow-sm">
+                  <img src="/assets/half-arm-wax.jpg" alt="Half Arm Wax" className="w-full h-full object-cover"/>
+                </div>
+                <div>
+                  <h3 className="text-base font-semibold text-slate-900">{english ? "Half Arm Wax" : "Cire de Demi-Bras"}</h3>
+                  <p className="text-xs text-slate-500 mt-1">{english ? "30 min" : "30 min"}</p>
+                </div>
+              </div>
+              <div className="flex flex-col items-center text-center gap-4">
+                <div className="w-full h-56 rounded-xl overflow-hidden bg-gray-200 shadow-sm">
+                  <img src="/assets/half-leg-wax.jpg" alt="Half Leg Wax" className="w-full h-full object-cover"/>
+                </div>
+                <div>
+                  <h3 className="text-base font-semibold text-slate-900">{english ? "Half Leg Wax" : "Cire de Demi-Jambe"}</h3>
+                  <p className="text-xs text-slate-500 mt-1">{english ? "40 min" : "40 min"}</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <p className="text-sm text-zinc-500 dark:text-zinc-400">
-            {english ? "BROWS" : "SOURCILS"}
-          </p>
-          <div className="flex items-center gap-4">
-            <div className="w-16 h-16 bg-zinc-200 rounded-full">
-              <img src="/assets/eyebrow-threading.jpg" alt="Eyebrow Threading"></img>
-              <h2>{english ? "Eyebrow Threading" : "Duvet de Sourcils"}</h2>
-              <p>{english ? "20 min" : "20 min"}</p>
-            </div>
-          </div>
-          <div className="flex items-center gap-4">
-            <div className="w-16 h-16 bg-zinc-200 rounded-full">
-              <img src="/assets/eyebrow-waxing.jpg" alt="Eyebrow Waxing"></img>
-              <h2>{english ? "Eyebrow Waxing" : "Cire de Sourcils"}</h2>
-              <p>{english ? "20 min" : "20 min"}</p>
-            </div>
-          </div>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <p className="text-sm text-zinc-500 dark:text-zinc-400">
-            {english ? "WAXING" : "CIRE"}
-          </p>
-          <div className="flex items-center gap-4">
-            <div className="w-16 h-16 bg-zinc-200 rounded-full">
-              <img src="/assets/half-arm-wax.jpg" alt="Half Arm Wax"></img>
-              <h2>{english ? "Half Arm Wax" : "Cire de Demi-Bras"}</h2>
-              <p>{english ? "30 min" : "30 min"}</p>
-            </div>
-          </div>
-          <div className="flex items-center gap-4">
-            <div className="w-16 h-16 bg-zinc-200 rounded-full">
-              <img src="/assets/half-leg-wax.jpg" alt="Half Leg Wax"></img>
-              <h2>{english ? "Half Leg Wax" : "Cire de Demi-Jambe"}</h2>
-              <p>{english ? "40 min" : "40 min"}</p>
-            </div>
-          </div>
         </div>
       </main>
     </div>
