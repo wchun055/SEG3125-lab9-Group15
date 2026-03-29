@@ -24,14 +24,14 @@ export default function Home() {
           </p>
           <div className="flex items-center gap-4">
             <div className="w-16 h-16 bg-zinc-200 rounded-full">
-              {/* image here */}
+              <img src="/assets/lash-lift.jpg" alt="Lash Lift"></img>
               <h2>{english ? "Lash Lift" : "Levée de Cils"}</h2>
               <p>{english ? "60 min" : "60 min"}</p>
             </div>
           </div>
           <div className="flex items-center gap-4">
             <div className="w-16 h-16 bg-zinc-200 rounded-full">
-              {/* image here */}
+              <img src="/assets/lash-tint.jpg" alt="Lash Tint"></img>
               <h2>{english ? "Lash Tint" : "Teinture de Cils"}</h2>
               <p>{english ? "30 min" : "30 min"}</p>
             </div>
@@ -43,14 +43,14 @@ export default function Home() {
           </p>
           <div className="flex items-center gap-4">
             <div className="w-16 h-16 bg-zinc-200 rounded-full">
-              {/* image here */}
+              <img src="/assets/eyebrow-threading.jpg" alt="Eyebrow Threading"></img>
               <h2>{english ? "Eyebrow Threading" : "Duvet de Sourcils"}</h2>
               <p>{english ? "20 min" : "20 min"}</p>
             </div>
           </div>
           <div className="flex items-center gap-4">
             <div className="w-16 h-16 bg-zinc-200 rounded-full">
-              {/* image here */}
+              <img src="/assets/eyebrow-waxing.jpg" alt="Eyebrow Waxing"></img>
               <h2>{english ? "Eyebrow Waxing" : "Cire de Sourcils"}</h2>
               <p>{english ? "20 min" : "20 min"}</p>
             </div>
@@ -62,14 +62,14 @@ export default function Home() {
           </p>
           <div className="flex items-center gap-4">
             <div className="w-16 h-16 bg-zinc-200 rounded-full">
-              {/* image here */}
+              <img src="/assets/half-arm-wax.jpg" alt="Half Arm Wax"></img>
               <h2>{english ? "Half Arm Wax" : "Cire de Demi-Bras"}</h2>
               <p>{english ? "30 min" : "30 min"}</p>
             </div>
           </div>
           <div className="flex items-center gap-4">
             <div className="w-16 h-16 bg-zinc-200 rounded-full">
-              {/* image here */}
+              <img src="/assets/half-leg-wax.jpg" alt="Half Leg Wax"></img>
               <h2>{english ? "Half Leg Wax" : "Cire de Demi-Jambe"}</h2>
               <p>{english ? "40 min" : "40 min"}</p>
             </div>
