@@ -18,7 +18,7 @@ export default function Home() {
           </button>
         </div>
         <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <form class="max-w-md mx-auto" onSubmit="alert('Your appointment has been submitted!')">
+          <form className="max-w-md mx-auto">
             <label>{english ? "Enter your location:" : "Entrez votre emplacement:"}</label>
             <br></br>
             <input required type="text" className="border"/>

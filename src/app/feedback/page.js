@@ -16,7 +16,7 @@ export default function Home() {
           </button>
         </div>
         <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <form class="max-w-md mx-auto" onSubmit="alert('Your feedback has been submitted!')">
+          <form className="max-w-md mx-auto">
             <label>{english ? "I would rate my experience a..." : "J'aimerais noter mon expérience de..."}</label>
             <br></br>
             <div className="rating">
