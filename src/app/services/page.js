@@ -16,14 +16,14 @@ export default function Home() {
           </p>
           <div className="flex items-center gap-4">
             <div className="w-16 h-16 bg-zinc-200 rounded-full">
-              {/* image here */}
+              <img src="/assets/lash-lift.jpg" alt="Lash Lift"></img>
               <h2>Lash Lift</h2>
               <p>60 min</p>
             </div>
           </div>
           <div className="flex items-center gap-4">
             <div className="w-16 h-16 bg-zinc-200 rounded-full">
-              {/* image here */}
+              <img src="/assets/lash-tint.jpg" alt="Lash Tint"></img>
               <h2>Lash Tint</h2>
               <p>30 min</p>
             </div>
@@ -35,14 +35,14 @@ export default function Home() {
           </p>
           <div className="flex items-center gap-4">
             <div className="w-16 h-16 bg-zinc-200 rounded-full">
-              {/* image here */}
+              <img src="/assets/eyebrow-threading.jpg" alt="Eyebrow Threading"></img>
               <h2>Eyebrow Threading</h2>
               <p>20 min</p>
             </div>
           </div>
           <div className="flex items-center gap-4">
             <div className="w-16 h-16 bg-zinc-200 rounded-full">
-              {/* image here */}
+              <img src="/assets/eyebrow-waxing.jpg" alt="Eyebrow Waxing"></img>
               <h2>Eyebrow Waxing</h2>
               <p>20 min</p>
             </div>
@@ -54,14 +54,14 @@ export default function Home() {
           </p>
           <div className="flex items-center gap-4">
             <div className="w-16 h-16 bg-zinc-200 rounded-full">
-              {/* image here */}
+              <img src="/assets/half-arm-wax.jpg" alt="Half Arm Wax"></img>
               <h2>Half Arm Wax</h2>
               <p>30 min</p>
             </div>
           </div>
           <div className="flex items-center gap-4">
             <div className="w-16 h-16 bg-zinc-200 rounded-full">
-              {/* image here */}
+              <img src="/assets/half-leg-wax.jpg" alt="Half Leg Wax"></img>
               <h2>Half Leg Wax</h2>
               <p>40 min</p>
             </div>

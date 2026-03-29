@@ -25,7 +25,7 @@ export default function Home() {
           </div>
         </div>
         <div>
-          {/* image here */}
+          <img src="/assets/jz-styles.jpg" alt="JZ Styles"></img>
           <p className="text-sm text-zinc-500 dark:text-zinc-400">
             Trusted by clients across the community
           </p>
@@ -45,14 +45,11 @@ export default function Home() {
             </Link>
           </div>
           <div className="flex items-center gap-4">
-            {/* image here */}
+            <img src="/assets/building.jpg" alt="Location"></img>
           </div>
         </div>
         
         <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <div className="flex items-center gap-4">
-            {/* image here */}
-          </div>
           <div className=" items-center gap-4">
             <h2 className="max-w-xs text-2xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
               Meet our technicians
@@ -65,6 +62,9 @@ export default function Home() {
                 Meet the team
               </button>
             </Link>
+          </div>
+          <div className="flex items-center gap-4">
+            <img src="/assets/team.jpg" alt="Technicians"></img>
           </div>
         </div>
       </main>
