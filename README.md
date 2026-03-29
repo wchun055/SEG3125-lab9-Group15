@@ -25,7 +25,7 @@
 
 5. [Supabase](https://supabase.com/) is used for this app. In the terminal, type:
 
-   ```npm install @supabase/supabase-js  ```
+   ```npm install @supabase/supabase-js```
 
 6. [uuid](https://www.npmjs.com/package/uuid) is also a requirment. In the terminal, type:
 
