@@ -1,5 +1,5 @@
 'use client';
-
+import { createMessage } from "./action";
 import { useLanguage } from '../context/LanguageContext';
 
 export default function Home() {
@@ -16,31 +16,31 @@ export default function Home() {
           </button>
         </div>
         <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <form className="max-w-md mx-auto">
+          <form className="max-w-md mx-auto" action={createMessage}>
             <label>{english ? "I would rate my experience a..." : "J'aimerais noter mon expérience de..."}</label>
             <br></br>
             <div className="rating">
-              <input type="radio" name="rating-1" className="mask mask-star" aria-label="1 star" />
-              <input type="radio" name="rating-1" className="mask mask-star" aria-label="2 star" />
-              <input type="radio" name="rating-1" className="mask mask-star" aria-label="3 star" />
-              <input type="radio" name="rating-1" className="mask mask-star" aria-label="4 star" />
-              <input type="radio" name="rating-1" className="mask mask-star" aria-label="5 star" />
+              <input type="radio" name="rating-1" value="1" className="mask mask-star" aria-label="1 star" />
+              <input type="radio" name="rating-1" value="2" className="mask mask-star" aria-label="2 star" />
+              <input type="radio" name="rating-1" value="3" className="mask mask-star" aria-label="3 star" />
+              <input type="radio" name="rating-1" value="4" className="mask mask-star" aria-label="4 star" />
+              <input type="radio" name="rating-1" value="5" className="mask mask-star" aria-label="5 star" />
             </div>
             <br></br>
             <br></br>
             <label>{english ? "Which location did you visit?" : "Quel lieu avez-vous visité ?"}</label>
             <br></br>
-            <input required type="text" className="border"/>
+            <input required type="text" name="location" className="border"/>
             <br></br>
             <br></br>
             <label>{english ? "Who was your technician?" : "Qui était votre technicien ?"}</label>
             <br></br>
-            <input required type="text" className="border"/>
+            <input required type="text" name="technician" className="border"/>
             <br></br>
             <br></br>
             <label>{english ? "Additional notes" : "Notes supplémentaires"}</label>
             <br></br>
-            <textarea className="border" placeholder={english ? "My feedback!!" : "Mon avis!!"}></textarea>
+            <textarea className="border" name="feedback" placeholder={english ? "My feedback!!" : "Mon avis!!"}></textarea>
             <br></br>
             <br></br>
             <button type="submit" className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]">
