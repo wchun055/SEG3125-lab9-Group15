@@ -19,15 +19,19 @@
 
    ```npm install```
 
-4. [daisyUI 5](https://www.npmjs.com/package/daisyui) is also a requirement. In the terminal, type:
+#### Libraries:
+
+When installing dependencies, the following will also be added:
+
+1. [daisyUI 5](https://www.npmjs.com/package/daisyui):
 
    ```npm i -D daisyui@latest```
 
-5. [Supabase](https://supabase.com/) is used for this app. In the terminal, type:
+2. [Supabase](https://supabase.com/):
 
    ```npm install @supabase/supabase-js```
 
-6. [uuid](https://www.npmjs.com/package/uuid) is also a requirment. In the terminal, type:
+3. [uuid](https://www.npmjs.com/package/uuid):
 
    ```npm install uuid```
 
