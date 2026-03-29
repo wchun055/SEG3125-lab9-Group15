@@ -1,5 +1,6 @@
 "use server";
 import { supabase } from "../lib/supabaseClient";
+import { v4 as uuidv4 } from "uuid";
 
 export async function createFeedback(formData) {
   const data = Object.fromEntries(formData);
@@ -10,10 +11,13 @@ export async function createFeedback(formData) {
     throw new Error("Rating, location, technician, and date are required");
   }
 
+  const id = uuidv4();
+
   const { error } = await supabase
     .from("feedback")
     .insert([
       {
+        id: id, 
         rating: data.rating,
         location: data.location,
         technician: data.technician,

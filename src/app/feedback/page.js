@@ -34,12 +34,19 @@ export default function Home() {
 
             <div className="flex flex-col gap-2">
               <label className="text-base font-medium text-slate-900">{english ? "Which location did you visit?" : "Quel lieu avez-vous visité ?"}</label>
-              <input required type="text" name="location" className="w-full px-4 py-2 border border-gray-300 rounded-lg text-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-900"/>
+             <select className="w-full px-4 py-2 border border-gray-300 rounded-lg text-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-900" name="location">
+              <option className="text-base font-medium text-slate-900" value="123 Apple Road">123 Apple Road</option>
+              <option className="text-base font-medium text-slate-900" value="456 Pear Avenue">456 Pear Avenue</option>
+            </select>
             </div>
 
             <div className="flex flex-col gap-2">
               <label className="text-base font-medium text-slate-900">{english ? "Who was your technician?" : "Qui était votre technicien ?"}</label>
-              <input required type="text" name="technician" className="w-full px-4 py-2 border border-gray-300 rounded-lg text-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-900"/>
+              <select className="w-full px-4 py-2 border border-gray-300 rounded-lg text-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-900" name="technician">
+                <option className="text-base font-medium text-slate-900" value="Wanda the wand-er">Wanda the wand-er</option>
+                <option className="text-base font-medium text-slate-900" value="Blanda the Brow-Hander">Blanda the Brow-Hander</option>
+                <option className="text-base font-medium text-slate-900" value="Sandra the Skin-Sander">Sandra the Skin-Sander</option>
+              </select>
             </div>
 
             <div className="flex flex-col gap-2">
