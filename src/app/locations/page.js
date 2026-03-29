@@ -1,13 +1,21 @@
+'use client';
+
+import { useLanguage } from '../context/LanguageContext';
+
 export default function Home() {
+  const { english, changeLanguage } = useLanguage();
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
         <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
           <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            Our Locations
+            {english ? "Our Locations" : "Nos Lieux"}
           </h1>
+          <button onClick={changeLanguage} className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]">
+            {english ? "changer en français" : "Change to English"}
+          </button>
           <p className="max-w-xs text-2xl leading-10 tracking-tight text-black dark:text-zinc-50">
-            Explore our different locations to see which spa offers your interested services.
+            {english ? "Explore our different locations to see which spa offers your interested services." : "Découvrez nos différents lieux pour voir quels spas offrent les services qui vous intéressent."}
           </p>
         </div>
         
