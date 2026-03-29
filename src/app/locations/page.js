@@ -1,48 +1,42 @@
 'use client';
 
+import Header from '../components/Header';
+import SideNav from '../components/SideNav';
 import { useLanguage } from '../context/LanguageContext';
 
 export default function Home() {
-  const { english, changeLanguage } = useLanguage();
+  const { english } = useLanguage();
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
+    <div className="min-h-screen bg-white text-slate-900 font-sans">
+      <Header />
+      <SideNav />
+      <main className="w-full lg:ml-48">
+        <div className="w-full mx-auto flex flex-col items-center justify-between py-32 px-6 bg-white transition-all duration-300 max-w-6xl">
+        <div className="flex flex-col items-center gap-6 text-center mb-12">
+          <h1 className="max-w-2xl text-5xl font-semibold leading-14 tracking-tight text-slate-900">
             {english ? "Our Locations" : "Nos Lieux"}
           </h1>
-          <button onClick={changeLanguage} className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]">
-            {english ? "changer en français" : "Change to English"}
-          </button>
-          <p className="max-w-xs text-2xl leading-10 tracking-tight text-black dark:text-zinc-50">
+          <p className="max-w-2xl text-xl leading-8 tracking-tight text-slate-700">
             {english ? "Explore our different locations to see which spa offers your interested services." : "Découvrez nos différents lieux pour voir quels spas offrent les services qui vous intéressent."}
           </p>
         </div>
-        
-        <form className="max-w-md mx-auto">   
-            <label htmlFor="search" className="block mb-2.5 text-sm font-medium text-heading sr-only ">Search</label>
-            <div className="relative">
-                <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                    <svg className="w-4 h-4 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" strokeLinecap="round" strokeWidth="2" d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"/></svg>
-                </div>
-                <input type="search" id="search" className="block w-full p-3 ps-9 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body" placeholder="Search" required />
-                {/* <button type="button" class="absolute end-1.5 bottom-1.5 text-white bg-brand hover:bg-brand-strong box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded text-xs px-3 py-1.5 focus:outline-none">Search</button> */}
-            </div>
-        </form>
-        
-        <div className="gap-4 text-base font-medium">
-          <div className="items-center gap-4">
-            <img src="/assets/apple-road.jpg" alt="Apple Road"></img>
-            <p className="text-sm text-zinc-500 dark:text-zinc-400">
-              123 Apple Road
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
+          <div className="flex flex-col items-center gap-6 text-center">
+            <img src="/assets/apple-road.jpg" alt="Apple Road" className="w-full h-72 object-cover rounded-2xl shadow-sm"></img>
+            <h2 className="text-2xl font-semibold text-slate-900">123 Apple Road</h2>
+            <p className="text-base text-slate-700">
+              {english ? "Visit our Apple Road location for premium spa services." : "Visitez notre lieu d'Apple Road pour des services de spa haut de gamme."}
             </p>
           </div>
-          <div className="items-center gap-4">
-            <img src="/assets/pear-drive.jpg" alt="Pear Avenue"></img>
-            <p className="text-sm text-zinc-500 dark:text-zinc-400">
-              456 Pear Avenue
+          <div className="flex flex-col items-center gap-6 text-center">
+            <img src="/assets/pear-drive.jpg" alt="Pear Avenue" className="w-full h-72 object-cover rounded-2xl shadow-sm"></img>
+            <h2 className="text-2xl font-semibold text-slate-900">456 Pear Avenue</h2>
+            <p className="text-base text-slate-700">
+              {english ? "Discover our Pear Avenue location with full spa amenities." : "Découvrez notre lieu d'Pear Avenue avec toutes les commodités du spa."}
             </p>
           </div>
+        </div>
         </div>
       </main>
     </div>
