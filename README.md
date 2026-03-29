@@ -23,6 +23,24 @@
 
    ```npm i -D daisyui@latest```
 
+5. [Supabase](https://supabase.com/) is used for this app. In the terminal, type:
+
+   ```npm install @supabase/supabase-js  ```
+
+6. [uuid](https://www.npmjs.com/package/uuid) is also a requirment. In the terminal, type:
+
+   ```npm install uuid```
+
+### Setting up Supabase:
+
+1. You will require your own .env.local file with:
+
+   ```NEXT_PUBLIC_SUPABASE_URL=URL HERE```
+
+   ```NEXT_PUBLIC_SUPABASE_PUBLISHABLE_DEFAULT_KEY=YOUR PERSONAL KEY HERE```
+
+   Please reach out for more information for setup.
+
 ### Starting server:
 1. In your clone repository (with npm installed), type:
    
