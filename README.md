@@ -27,6 +27,10 @@
 
    ```npm install @supabase/supabase-js  ```
 
+6. [uuid](https://www.npmjs.com/package/uuid) is also a requirment. In the terminal, type:
+
+   ```npm install uuid```
+
 ### Setting up Supabase:
 
 1. You will require your own .env.local file with:
