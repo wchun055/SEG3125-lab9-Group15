@@ -1,6 +1,6 @@
 'use client';
 import Link from "next/link";
-import { createMessage } from "./action";
+import { createBooking } from "./action";
 import { useLanguage } from '../context/LanguageContext';
 
 export default function Home() {
@@ -17,7 +17,7 @@ export default function Home() {
           </button>
         </div>
         <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <form className="max-w-md mx-auto" action={createMessage}>
+          <form className="max-w-md mx-auto" action={createBooking}>
             <label>{english ? "Enter your location:" : "Entrez votre emplacement:"}</label>
             <br></br>
             <input required type="text" className="border" name="location"/>
