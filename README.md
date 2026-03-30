@@ -2,6 +2,14 @@
 
 *Designing a website of our choice. (Part 2)*
 
+**New Additions:**
+
+- Connected to Supabase database.
+
+- Styling overhaul.
+
+- Two languages available for entire site. (English and French toggle.)
+
 **Group 15:**
 
 - Winona Chung (300298148)
